@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{"3MhO":function(n,u,e){"use strict";e.r(u);var t={name:"EquipoSalud"},c=e("KHd+"),i=Object(c.a)(t,(function(){return(0,this._self._c)("div")}),[],!1,null,"466fbc99",null);u.default=i.exports}}]);

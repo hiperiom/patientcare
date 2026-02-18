@@ -1,0 +1,365 @@
+@extends('component.template')
+
+@section('title')
+    CMDLT | PatientCare
+@endsection
+@section('header')
+@endsection
+@section('menu_2')
+
+@endsection
+@section('content')
+
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-10">
+                <div class="d-flex flex-column">
+                    <div class="h1 text-white ">GERENCIA DE INNOVACIÓN</div>
+                    <div class="h3 text-warning font-weight-bold">PROGRAMA DE ATENCIÓN DOMICILIARIA</div>
+                    <div class="h4">
+                        <div class="d-flex">
+                            <div id="fecha_reporte" class="bg-danger text-white px-1"></div>
+                            <div class="border-bottom border-danger text-white  px-1">Total de pacientes diarios monitoreados en el PAD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <img class="img-fluid"
+                src="/image/system/{{ env('APP_LOGO_WHITE') }}"
+                alt="Logo Institución">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <div class="text-center">
+                    <img class="img-fluid"
+                    style="height:200px"
+                        src="/image/system/pad/men_1.svg"
+                        alt="Total Pacientes">
+                        <div class="d-flex flex-column text-center">
+                            <div class="font-weight-bold h2 text-white">TOTAL</div>
+                            <div id="total_pad" class="display-1 text-warning">0</div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex flex-column text-center">
+                                <div class="font-weight-bold h2 border-bottom border-white text-white">PAD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pads_list" class="row">
+
+                    </div>
+                    <div id="pads_totales" class="row mt-3">
+                    </div>
+                    <hr>
+
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="d-flex flex-column mb-3">
+                                <div class="display-5 text-white">Iconos</div>
+                            </div>
+                        <div class="container-fluid">
+
+                            <div class="row align-items-center">
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_2_1.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_3_1.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_4_1.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1 h5 text-white">
+                                        Empleados
+                                    </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_2.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_3.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1">
+                                    <img style="width: 20px;height:30px;"src="/image/system/pad/men_4.svg"alt="Total Pacientes">
+                                </div>
+                                <div class="p-1 h5 text-white">
+                                    Pacientes
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <div class="d-flex flex-column mb-3">
+                                <div class="display-5 text-white">Colores</div>
+                            </div>
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="p-2 bg-danger rounded-circle"></div>
+                                <div class="p-1 h5 text-white">
+                                        De cuidado
+                                    </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="p-2 bg-warning rounded-circle"></div>
+                                <div class="p-1 h5 text-white">
+                                        Intermedio
+                                    </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="p-2 bg-success rounded-circle"></div>
+                                <div class="p-1 h5 text-white">
+                                        Estable
+                                    </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+@endsection
+@section('footer')
+
+@endsection
+@section('script')
+     <script>
+        async function reportePad() {
+            let reporte_pad = get("/vistas/v_pad_reporte_diario")
+                reporte_pad.then(x=>{
+                    document.getElementById('pads_list').innerHTML=""
+                    document.getElementById('pads_totales').innerHTML=""
+                    document.getElementById('total_pad').innerHTML= first(x).total_pad
+                    let card = (data) =>{
+                        console.log(data)
+                        let {
+                            pad_nombre,
+                            pad_total,
+                            pad_intermedios,
+                            pad_de_cuidado,
+                            pad_1,
+                            pad_2,
+                            pad_3,
+                            pad_4,
+                            pad_5,
+                            pad_emp
+                        } = JSON.parse(data)
+
+                        let iconos =""
+                            for (let index = 1; index <= (pad_total - (pad_intermedios + pad_de_cuidado + pad_emp)); index++) {
+                                iconos += `
+                                    <div class="p-1">
+                                        <img style="width: 20px;height:30px;"src="/image/system/pad/men_4.svg"alt="Total Pacientes">
+                                    </div>
+                                `
+                            }
+                            for (let index = 1; index <= pad_emp; index++) {
+                                iconos += `
+                                    <div class="p-1">
+                                        <img style="width: 20px;height:30px;"src="/image/system/pad/men_4_1.svg"alt="Total Pacientes">
+                                    </div>
+                                `
+                            }
+                            for (let index = 1; index <= pad_intermedios; index++) {
+                                iconos += `
+                                    <div class="p-1">
+                                        <img style="width: 20px;height:30px;"src="/image/system/pad/men_3.svg"alt="Total Pacientes">
+                                    </div>
+                                `
+                            }
+                            for (let index = 1; index <= pad_de_cuidado; index++) {
+                                iconos += `
+                                    <div class="p-1">
+                                        <img style="width: 20px;height:30px;"src="/image/system/pad/men_2.svg"alt="Total Pacientes">
+                                    </div>
+                                `
+                            }
+
+
+                        document.getElementById('pads_list').insertAdjacentHTML("beforeend",`
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="d-flex flex-column text-center">
+                                        <div class="font-weight-bold h2 text-white">${pad_nombre.toUpperCase()}</div>
+                                        <div class="display-1 text-warning">${pad_total}</div>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div id="" class="row">
+                                            ${iconos}
+                                        </div>
+                                    </div>
+                                </div>
+                            `)
+
+                        document.getElementById('pads_totales').insertAdjacentHTML("beforeend",`
+                            <div class="col-4 border-left">
+                                <ul class="list-unstyled text-white">
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_1}
+                                            </div>
+                                            <div>
+                                                PAD 1
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_2}
+                                            </div>
+                                            <div>
+                                                PAD 2
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_3}
+                                            </div>
+                                            <div>
+                                                PAD 3
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_4}
+                                            </div>
+                                            <div>
+                                                PAD 4
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_5}
+                                            </div>
+                                            <div>
+                                                PAD 5
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_emp}
+                                            </div>
+                                            <div>
+                                                PAD Emp
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li class="mb-4">
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_total - pad_emp}
+                                            </div>
+                                            <div>
+                                                Pacientes
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+
+                                            <div class="mr-1 font-weight-bold text-success">
+                                                ${pad_total -(pad_intermedios + pad_de_cuidado)}
+                                            </div>
+                                            <div>
+                                                Estables
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <div class="mr-1 font-weight-bold text-warning">
+                                                ${pad_intermedios}
+                                            </div>
+                                            <div>
+                                                Intermedios
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex"  >
+                                            <div class="mr-1 font-weight-bold text-danger">
+                                                ${pad_de_cuidado}
+                                            </div>
+                                            <div>
+                                                De cuidado
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        `)
+                    }
+                    for (let index = 1; index < Object.keys(first(x)).length; index++) {
+                        let key = Object.keys(first(x))[index]
+                        card( first(x)[ key ] )
+
+                    }
+                    //console.log( Object.keys(first(x)).length)
+
+                })
+        }
+
+
+        document.addEventListener("DOMContentLoaded",e=>{
+            let fecha = f = new Date();
+                fecha = meses(f.getMonth()).toUpperCase()+ " " + f.getDate() + ", " + f.getFullYear()  + " " + formatAMPM(fecha);
+                document.getElementById('fecha_reporte').innerHTML=fecha
+
+
+            reportePad()
+
+            setInterval(() => {
+                reportePad()
+            }, 5000);
+        })
+     </script>
+
+@endsection
+@section('css')
+<style>
+    body{
+         background-color: #213647;
+     }
+</style>
+
+@endsection

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[41],{fVDc:function(n,e,c){"use strict";c.r(e);var t={name:"Pacientes"},s=c("KHd+"),a=Object(s.a)(t,(function(){return(0,this._self._c)("div")}),[],!1,null,"30a5e4c1",null);e.default=a.exports}}]);

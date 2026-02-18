@@ -1,0 +1,419 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('fonts/icomoon.ttf?1qs432') format('truetype'),
+    url('fonts/icomoon.woff?1qs432') format('woff'),
+    url('fonts/icomoon.svg?1qs432#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="pc-"], [class*=" pc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pc-emergencia:before {
+  content: "\e980";
+}
+.pc-pad_emergencia:before {
+  content: "\e981";
+}
+.pc-pad_cardiologia:before {
+  content: "\e982";
+}
+.pc-padel:before {
+  content: "\e97f";
+}
+.pc-nebulizacion:before {
+  content: "\e979";
+}
+.pc-observacion:before {
+  content: "\e97a";
+}
+.pc-telesalud_empresarial:before {
+  content: "\e97b";
+}
+.pc-traumashock:before {
+  content: "\e97c";
+}
+.pc-triaje:before {
+  content: "\e97d";
+}
+.pc-hoteleria:before {
+  content: "\e97e";
+}
+.pc-fotografia:before {
+  content: "\e976";
+}
+.pc-plan:before {
+  content: "\e977";
+}
+.pc-orden_medica:before {
+  content: "\e978";
+}
+.pc-evolucion:before {
+  content: "\e975";
+}
+.pc-antecedentes:before {
+  content: "\e974";
+}
+.pc-imagenes:before {
+  content: "\e96f";
+}
+.pc-laboratorio1:before {
+  content: "\e970";
+}
+.pc-buscar:before {
+  content: "\e938";
+}
+.pc-otros-archivos:before {
+  content: "\e971";
+}
+.pc-recipe1:before {
+  content: "\e972";
+}
+.pc-estudio-diagnostico:before {
+  content: "\e973";
+}
+.pc-cmdt-isotipo:before {
+  content: "\e96e";
+}
+.pc-family:before {
+  content: "\e96b";
+}
+.pc-info_administracion_solid:before {
+  content: "\e969";
+}
+.pc-info_administracion_light:before {
+  content: "\e96a";
+}
+.pc-paciente-info-solid:before {
+  content: "\e90b";
+}
+.pc-signos_vitales:before {
+  content: "\e924";
+}
+.pc-signos_vitales1:before {
+  content: "\e946";
+}
+.pc-solid-history-folder:before {
+  content: "\e90d";
+}
+.pc-historia-light:before {
+  content: "\e952";
+}
+.pc-historia-inicial-solid:before {
+  content: "\e953";
+}
+.pc-historia-inicial-light:before {
+  content: "\e954";
+}
+.pc-folder_informes:before {
+  content: "\e968";
+}
+.pc-historial-episodios-solid:before {
+  content: "\e955";
+}
+.pc-historial-episodios-light1:before {
+  content: "\e956";
+}
+.pc-historia_clinica_solid:before {
+  content: "\e967";
+}
+.pc-solid-evolucion:before {
+  content: "\e910";
+}
+.pc-evolucion-light:before {
+  content: "\e957";
+}
+.pc-evo-medic:before {
+  content: "\e94f";
+}
+.pc-evolucion-medico-light:before {
+  content: "\e958";
+}
+.pc-evo-nurse:before {
+  content: "\e950";
+}
+.pc-enfermeria-light:before {
+  content: "\e959";
+}
+.pc-pendiente_paciente:before {
+  content: "\e920";
+}
+.pc-pendiente-circulo:before {
+  content: "\e91e";
+}
+.pc-whatsapp-solid:before {
+  content: "\e951";
+}
+.pc-whatsapp-light:before {
+  content: "\e905";
+}
+.pc-cirugia:before {
+  content: "\e93c";
+}
+.pc-cirugia-light:before {
+  content: "\e95a";
+}
+.pc-resbalar:before {
+  content: "\e93b";
+}
+.pc-paciente_vip:before {
+  content: "\e940";
+}
+.pc-alerta_estable:before {
+  content: "\e93d";
+}
+.pc-alerta_intermedia:before {
+  content: "\e93e";
+}
+.pc-alerta_alta:before {
+  content: "\e93f";
+}
+.pc-paciente:before {
+  content: "\e925";
+}
+.pc-medico:before {
+  content: "\e921";
+}
+.pc-enfermeria:before {
+  content: "\e911";
+}
+.pc-medico_editar:before {
+  content: "\e92a";
+}
+.pc-medico_inactivo:before {
+  content: "\e941";
+}
+.pc-rayosx:before {
+  content: "\e917";
+}
+.pc-laboratorio:before {
+  content: "\e942";
+}
+.pc-solid-cruz:before {
+  content: "\e922";
+}
+.pc-dia:before {
+  content: "\e95b";
+}
+.pc-mediodia:before {
+  content: "\e95c";
+}
+.pc-neonato:before {
+  content: "\e95d";
+}
+.pc-pediatrico:before {
+  content: "\e962";
+}
+.pc-adulto:before {
+  content: "\e963";
+}
+.pc-emergencia-solid:before {
+  content: "\e964";
+}
+.pc-emergencia-light:before {
+  content: "\e965";
+}
+.pc-oftalmologia:before {
+  content: "\e966";
+}
+.pc-cirugia-solid:before {
+  content: "\e95e";
+}
+.pc-telesalud-empresarial:before {
+  content: "\e906";
+}
+.pc-veterinario:before {
+  content: "\e915";
+}
+.pc-reportes:before {
+  content: "\e916";
+}
+.pc-pdf:before {
+  content: "\e927";
+}
+.pc-exonerado:before {
+  content: "\e943";
+}
+.pc-excel:before {
+  content: "\e944";
+}
+.pc-equipo_medico:before {
+  content: "\e945";
+}
+.pc-columns:before {
+  content: "\e947";
+}
+.pc-cama_vacia:before {
+  content: "\e948";
+}
+.pc-cama_ocupada:before {
+  content: "\e949";
+}
+.pc-cama_ocupada_solid:before {
+  content: "\e96c";
+}
+.pc-cama:before {
+  content: "\e94a";
+}
+.pc-cama_ocupada_light:before {
+  content: "\e96d";
+}
+.pc-solid-reporte:before {
+  content: "\e90c";
+}
+.pc-cronometro-solid:before {
+  content: "\e960";
+}
+.pc-cronometro-light:before {
+  content: "\e961";
+}
+.pc-archivo-regular:before {
+  content: "\e94b";
+}
+.pc-calendario:before {
+  content: "\e94c";
+}
+.pc-atencion_al_paciente:before {
+  content: "\e92c";
+}
+.pc-apoyo-diagnostico:before {
+  content: "\e94e";
+}
+.pc-ambulance:before {
+  content: "\e93a";
+}
+.pc-home:before {
+  content: "\e939";
+}
+.pc-warning:before {
+  content: "\e935";
+}
+.pc-success:before {
+  content: "\e936";
+}
+.pc-preconsulta:before {
+  content: "\e937";
+}
+.pc-recipe:before {
+  content: "\e912";
+}
+.pc-laboratorios:before {
+  content: "\e913";
+}
+.pc-estudio:before {
+  content: "\e91c";
+}
+.pc-estudios_diagnosticos:before {
+  content: "\e926";
+}
+.pc-fotografias:before {
+  content: "\e914";
+}
+.pc-grafico:before {
+  content: "\e91a";
+}
+.pc-hospital:before {
+  content: "\e91b";
+}
+.pc-otros_archivos:before {
+  content: "\e923";
+}
+.pc-user:before {
+  content: "\e928";
+}
+.pc-administrador:before {
+  content: "\e929";
+}
+.pc-ambulatorio:before {
+  content: "\e92b";
+}
+.pc-card_user:before {
+  content: "\e92d";
+}
+.pc-check:before {
+  content: "\e92e";
+}
+.pc-cita_cancelada:before {
+  content: "\e92f";
+}
+.pc-cita_confirmada:before {
+  content: "\e930";
+}
+.pc-cita_favorita:before {
+  content: "\e931";
+}
+.pc-cita_por_confirmar:before {
+  content: "\e932";
+}
+.pc-cita_reprogramada:before {
+  content: "\e933";
+}
+.pc-consulta:before {
+  content: "\e934";
+}
+.pc-solid-todolist:before {
+  content: "\e90a";
+}
+.pc-uti-light:before {
+  content: "\e95f";
+}
+.pc-solid-pisos:before {
+  content: "\e904";
+}
+.pc-light-pisos:before {
+  content: "\e903";
+}
+.pc-light-patient-copia-3:before {
+  content: "\e91d";
+}
+.pc-light-hospital:before {
+  content: "\e901";
+}
+.pc-light-pad-medico:before {
+  content: "\e907";
+}
+.pc-light-pad-quiru:before {
+  content: "\e908";
+}
+.pc-light-pad-covid:before {
+  content: "\e909";
+}
+.pc-light-homecare:before {
+  content: "\e919";
+}
+.pc-fa-patientcare-logo:before {
+  content: "\e900";
+}
+.pc-solid_estetoscopio:before {
+  content: "\e902";
+}
+.pc-light-emergency:before {
+  content: "\e918";
+}
+.pc-fa-blue-code-off:before {
+  content: "\e90e";
+}
+.pc-fa-blue-code-on:before {
+  content: "\e90f";
+}
+.pc-light-satisfation:before {
+  content: "\e91f";
+}
+.pc-light-medication:before {
+  content: "\e94d";
+}

@@ -1,0 +1,87 @@
+{
+  "_from": "chartjs-plugin-annotation@next",
+  "_id": "chartjs-plugin-annotation@1.0.0-beta.4",
+  "_inBundle": false,
+  "_integrity": "sha512-dGCI3cxxCMSzC3aRd5Klm1aFcLSD+UwDYtnKJHl1Dp49k3Pj6H5FzjEKyC75FKrAvomGwbF9jeBlvJNAdch3GA==",
+  "_location": "/chartjs-plugin-annotation",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "chartjs-plugin-annotation@next",
+    "name": "chartjs-plugin-annotation",
+    "escapedName": "chartjs-plugin-annotation",
+    "rawSpec": "next",
+    "saveSpec": null,
+    "fetchSpec": "next"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/chartjs-plugin-annotation/-/chartjs-plugin-annotation-1.0.0-beta.4.tgz",
+  "_shasum": "82a4186a2879a096bf7a9793e47c5a0c2f35ff4e",
+  "_spec": "chartjs-plugin-annotation@next",
+  "_where": "C:\\wamp64\\www\\homecare_cmdlt",
+  "author": {
+    "name": "Evert Timberg",
+    "email": "evert.timberg@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/chartjs/chartjs-plugin-annotation/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Annotations for Chart.js",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "chart.js": "^3.0.0-beta.13",
+    "chartjs-test-utils": "^0.1.2",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.19.0",
+    "eslint-config-chartjs": "^0.3.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-html": "^6.1.1",
+    "karma": "^6.0.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.5.4",
+    "karma-rollup-preprocessor": "^7.0.5",
+    "pixelmatch": "^5.2.1",
+    "rollup": "^2.38.4",
+    "rollup-plugin-istanbul": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "homepage": "https://github.com/chartjs/chartjs-plugin-annotation#readme",
+  "license": "MIT",
+  "main": "dist/chartjs-plugin-annotation.js",
+  "module": "dist/chartjs-plugin-annotation.esm.js",
+  "name": "chartjs-plugin-annotation",
+  "peerDependencies": {
+    "chart.js": "^3.0.0-beta.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chartjs/chartjs-plugin-annotation.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "karma start --auto-watch --no-single-run --browsers chrome",
+    "lint": "eslint samples/**/*.html test/**/*.js src/**/*.js",
+    "test": "cross-env NODE_ENV=test concurrently \"npm:test-*\"",
+    "test-karma": "karma start --auto-watch --single-run",
+    "test-lint": "npm run lint",
+    "test-types": "tsc -p types/test/"
+  },
+  "types": "types/index.d.ts",
+  "version": "1.0.0-beta.4"
+}

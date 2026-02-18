@@ -1,0 +1,4 @@
+
+.tooltip.bs-tooltip-top .tooltip-inner {
+    background: var(--primary) !important;
+}

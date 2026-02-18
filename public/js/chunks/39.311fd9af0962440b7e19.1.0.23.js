@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[39],{zGMy:function(n,i,s){"use strict";s.r(i);var t={name:"InicioAdmin"},c=s("KHd+"),e=Object(c.a)(t,(function(){return(0,this._self._c)("div",[this._v("aquí van estadísticas, gráficos, etc...\n")])}),[],!1,null,"59db04ec",null);i.default=e.exports}}]);

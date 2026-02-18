@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[50],{EJ2S:function(n,e,c){"use strict";c.r(e);var s={name:"PacienteBuscar"},t=c("KHd+"),a=Object(t.a)(s,(function(){return(0,this._self._c)("div",[this._v("\n    Buscar\n")])}),[],!1,null,"e245d8ac",null);e.default=a.exports}}]);
